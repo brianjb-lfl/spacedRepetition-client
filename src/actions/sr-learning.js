@@ -40,7 +40,8 @@ export const sendQResult = (userId, qId, qStatus) => dispatch => {
     if(!res.ok) {
       return Promise.reject(res.statusText)
     }
-    return res.json();
+    return
+    //return res.json();
   })
 }
 
