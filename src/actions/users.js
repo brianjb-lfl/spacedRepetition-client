@@ -25,3 +25,10 @@ export const registerUser = user => dispatch => {
           }
       });
 };
+
+export const getQuestion = username => dispatch => {
+  return fetch(`${API_BASE_URL}/users/userquestion/:username`)
+  .then(res => {
+    
+  })
+}
