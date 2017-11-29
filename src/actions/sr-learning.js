@@ -29,7 +29,6 @@ export const sendQResult = (userId, qId, qStatus) => dispatch => {
   return fetch(`${API_BASE_URL}/users/userquestion/${userId}`, {
     method: 'PUT',
     body: JSON.stringify({
-      _id: qId,
       qCorrect: (qStatus === 'answerCorr') 
     }),
     headers: {
@@ -37,6 +36,7 @@ export const sendQResult = (userId, qId, qStatus) => dispatch => {
     }
   })
   .then(res => {
+    console.log(res);
     if(!res.ok) {
       return Promise.reject(res.statusText)
     }

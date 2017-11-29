@@ -1,7 +1,6 @@
 const initialState = {
     currQ: null,
     currA: null,
-    currQId: '',
     currCorr: 0,
     currAtt: 0,
     currStatus: 'question'    // question, answerCorr, answerIncorr
