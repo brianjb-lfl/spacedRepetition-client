@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { processAnswer, processQuit, fetchQuestion } from '../../actions/sr-learning';
+import { processAnswer, processQuit, fetchQuestion, sendQResult } from '../../actions/sr-learning';
 import {setCurrentUser, setAuthToken} from '../../actions/auth';
 import {clearAuthToken} from '../../local-storage';
 import './answer-form.css';
@@ -10,7 +10,8 @@ export class AnswerForm extends React.Component {
   handleFormSubmit(event) {
     event.preventDefault();
     if(this.props.status === 'question') {
-      this.props.dispatch(processAnswer(this.answer.value))
+      this.props.dispatch(processAnswer(this.answer.value));
+      this.props.dispatch(sendQResult(this.props.id, this.props.qId, this.props.status))
     }
     else {
       this.answer.value = '';
@@ -54,6 +55,7 @@ export class AnswerForm extends React.Component {
 export const mapStateToProps = state => ({
   status: state.srLearning.currStatus,
   id: state.auth.currentUser.id,
+  qId: state.srLearning.currQId,
 });
 
 export default connect(mapStateToProps)(AnswerForm);
