@@ -25,10 +25,20 @@ input, label {
 }
 
 button {
-  min-width: 50px;
+  min-width: 75px;
   margin: 10px;
-  font-size: .8em;
+  font-size: 1em;
   font-weight: 500;
+  background-color: #758108;
+  color: #080838;
+  border-radius: 3px;
+}
+
+.small-button {
+  min-width: 60px;
+  margin: 5px;
+  font-size: 0.8em;
+  font-weight: 400;
   background-color: #758108;
   color: #080838;
   border-radius: 3px;

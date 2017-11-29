@@ -1,0 +1,7 @@
+#score-line {
+  width: 100%;
+  padding-right: 10%;
+  margin: 40px auto 0;
+  font-size: 1em;
+  text-align: right;
+}

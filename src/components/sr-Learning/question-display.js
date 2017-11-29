@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchQuestion } from '../../actions/sr-learning';
+import './question-display.css';
 
 export class QuestionDisplay extends React.Component {
 
@@ -12,7 +13,7 @@ export class QuestionDisplay extends React.Component {
     return (
       <div>
         <h3>id: {this.props.id}</h3>
-        <p>{this.props.question}</p>
+        <div id="q-display">{this.props.question}</div>
       </div>
     )
   }

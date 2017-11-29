@@ -1,0 +1,17 @@
+#result-display {
+  width: 100%;
+  margin: 20px auto;
+  color: #959494;
+  font-weight: 600;
+  text-align: center;
+}
+
+.right-answer {
+  font-size: 2em;
+  background-color: green;
+}
+
+.wrong-answer {
+  font-size: 2em;
+  background-color: red;
+}

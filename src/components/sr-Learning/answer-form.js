@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { processAnswer, processQuit, fetchQuestion } from '../../actions/sr-learning';
 import {setCurrentUser, setAuthToken} from '../../actions/auth';
 import {clearAuthToken} from '../../local-storage';
+import './answer-form.css';
 
 export class AnswerForm extends React.Component {
 
@@ -39,7 +40,7 @@ export class AnswerForm extends React.Component {
     }
 
     return (
-      <div>
+      <div id="answer-form">
         <form onSubmit={e => this.handleFormSubmit(e)} ref={form => this.form = form}>
           <input type="text" placeholder="answer" disabled={inputDisabled} ref={input => this.answer = input} />
           <button type="submit">{btnTxt}</button>
