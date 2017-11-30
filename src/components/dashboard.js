@@ -26,7 +26,7 @@ export class Dashboard extends React.Component {
     return (
       <div className="dashboard">
         <div className="dashboard-username">
-            Username: {this.props.username}
+            <div className="welcome-text">Welcome {this.props.username}!</div>
         </div>
 
         <QuestionDisplay />

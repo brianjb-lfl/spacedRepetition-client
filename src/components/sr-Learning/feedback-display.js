@@ -10,8 +10,8 @@ export class FeedbackDisplay extends React.Component {
     if(this.props.status === 'answerIncorr') {
       feedbackCode = (
         <div>
-          <div className="fb-label">The correct answer is:</div>
-          <div className="fb-text">{this.props.answer}</div>
+          <div className="answ-label">The correct answer is:</div>
+          <div className="answ-text">{this.props.answer}</div>
         </div>
       ) 
     }
@@ -19,16 +19,18 @@ export class FeedbackDisplay extends React.Component {
       feedbackCode = <div></div>
     }
 
+    const accPct = this.props.qhistAtt > 0 ? this.props.qhistCorr/this.props.qhistAtt : 0;
+
     return (
-      <div>
+      <div id="feedback-container">
         <div id="feedback-box">
           {feedbackCode}
         </div>
         <div id="q-history-box">
           <div className="fb-label">Question history:</div>
-          <div className="fb-text">{`Times attempted: ${this.props.qhistAtt}`}</div>
-          <div className="fb-text">{`Times correct: ${this.props.qhistCorr}`}</div>
-          <div className="fb-text">{`Accuracy: ${this.props.qhistCorr/this.props.qhistAtt}`}</div>
+          <div className="fb-text fb-pct">{`${accPct.toLocaleString(undefined, {style: 'percent', minimumFractionDigits: 1})}`}</div>
+          <div className="fb-text">{`Attempts: ${this.props.qhistAtt}`}</div>
+          <div className="fb-text">{`Correct: ${this.props.qhistCorr}`}</div>
         </div>
       </div>
     )

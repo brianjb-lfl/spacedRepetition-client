@@ -8,7 +8,6 @@ export class ResultDisplay extends React.Component {
     const resCode = {
       answerCorr: <div className="right-answer">Correct!</div>,
       answerIncorr: <div className="wrong-answer">Incorrect</div>,
-      question: <span>Waiting</span>
     }
     
     let response = resCode[this.props.status];

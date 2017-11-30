@@ -12,8 +12,7 @@ export class QuestionDisplay extends React.Component {
 
   render() {
     return (
-      <div>
-        <h3>id: {this.props.id}</h3>
+      <div id="q-container">
         <div id="q-display">{this.props.question}</div>
       </div>
     )

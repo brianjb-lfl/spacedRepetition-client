@@ -43,8 +43,8 @@ export class AnswerForm extends React.Component {
     }
 
     return (
-      <div id="answer-form">
-        <form onSubmit={e => this.handleFormSubmit(e)} ref={form => this.form = form}>
+      <div id="answer-form-container">
+        <form id="answer-form" onSubmit={e => this.handleFormSubmit(e)} ref={form => this.form = form}>
           <input type="text" placeholder="answer" disabled={inputDisabled} ref={input => this.answer = input} />
           <button type="submit">{btnTxt}</button>
           {quitBtnCode}

@@ -1,12 +1,64 @@
+#feedback-container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 20px auto;
+  height: 120px;
+  background-color: #5454e6;
+  border-style: inset;
+  border-radius: 5px;
+}
+
 #q-history-box {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+  height: 100%;
+}
+
+#feedback-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 5;
+  height: 100%;
+}
+
+.answ-label, .answ-text {
+  width: 100%;
+  font-weight: 600;
+  font-size: 1.3em;
+}
+
+.answ-label {
+  padding: 16px 24px;
+  color: #a8a8a8;
+  text-align: left;
+}
+
+.answ-text {
+  text-align: center;
+  font-size: 1.7em;
+  font-weight: 200;
+}
+
+.fb-label, .fb-text {
+  font-size: 0.9em;
 }
 
 .fb-label {
-  color: rgb(168, 168, 168);
+  margin-bottom: 4px;
+  color: #a8a8a8;
   font-weight: 600;
 }
 
 .fb-text {
-  margin: 5px 15px;
+  margin: 2px;
+}
+
+.fb-pct {
+  font-size: 1.8em;
+  font-weight: 600;
 }

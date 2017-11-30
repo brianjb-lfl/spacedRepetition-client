@@ -1,17 +1,27 @@
 #result-display {
-  width: 100%;
-  margin: 20px auto;
+  height: 30px;
+  width: 80%;
+  margin: 0 auto;
   color: #cccccc;
   font-weight: 600;
   text-align: center;
 }
 
-.right-answer {
+.right-answer, .wrong-answer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
   font-size: 2em;
-  background-color: green;
+}
+
+.right-answer {
+  background-color: #0d9c0d;
+  box-shadow: 2px 2px 2px #5d7a5c;
 }
 
 .wrong-answer {
-  font-size: 2em;
-  background-color: red;
+  background-color: #b41515;
+  box-shadow: 2px 2px 2px #8d5757;
 }
