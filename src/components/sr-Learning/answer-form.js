@@ -9,9 +9,11 @@ export class AnswerForm extends React.Component {
 
   handleFormSubmit(event) {
     event.preventDefault();
+
     if(this.props.status === 'question') {
-      this.props.dispatch(processAnswer(this.answer.value));
-      this.props.dispatch(sendQResult(this.props.id, this.props.qId, this.props.status))
+      let ansCorr = (this.answer.value.toLowerCase() === this.props.answer.toLowerCase());
+      this.props.dispatch(processAnswer(ansCorr));
+      this.props.dispatch(sendQResult(this.props.id, ansCorr))
     }
     else {
       this.answer.value = '';
@@ -55,7 +57,7 @@ export class AnswerForm extends React.Component {
 export const mapStateToProps = state => ({
   status: state.srLearning.currStatus,
   id: state.auth.currentUser.id,
-  qId: state.srLearning.currQId,
+  answer: state.srLearning.currA
 });
 
 export default connect(mapStateToProps)(AnswerForm);

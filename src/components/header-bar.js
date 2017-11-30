@@ -1,11 +1,13 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {setCurrentUser, setAuthToken} from '../actions/auth';
+import {processQuit} from '../actions/sr-learning';
 import {clearAuthToken} from '../local-storage';
 import './header-bar.css';
 
 export class HeaderBar extends React.Component {
     logOut() {
+        this.props.dispatch(processQuit());
         this.props.dispatch(setCurrentUser(null));
         this.props.dispatch(setAuthToken(null));
         clearAuthToken();

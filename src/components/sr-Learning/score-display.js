@@ -5,6 +5,7 @@ import './score-display.css';
 export class ScoreDisplay extends React.Component {
 
   render() {
+    console.log('component ', this.props.currAtt, this.props.currCorr);
 
     return (
       <div id="score-line">
