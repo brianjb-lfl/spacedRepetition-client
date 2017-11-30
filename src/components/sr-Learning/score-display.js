@@ -9,7 +9,8 @@ export class ScoreDisplay extends React.Component {
 
     return (
       <div id="score-line">
-        <span>Score: {this.props.currCorr} correct out of {this.props.currAtt} attempted</span>
+        <div>Current Score: {this.props.currCorr} correct out of {this.props.currAtt} attempted</div>
+        <div>Lifetime Score: {this.props.lifeC} correct out of {this.props.lifeA} attempted</div>
       </div>
     )
   }
@@ -17,7 +18,9 @@ export class ScoreDisplay extends React.Component {
 
 export const mapStateToProps = state => ({
   currAtt: state.srLearning.currAtt,
-  currCorr: state.srLearning.currCorr
+  currCorr: state.srLearning.currCorr,
+  lifeC: state.srLearning.lifeCorr,
+  lifeA: state.srLearning.lifeAtt
 });
 
 export default connect(mapStateToProps)(ScoreDisplay);

@@ -6,6 +6,10 @@ h1 {
   color: yellow;
 }
 
+#logout-link {
+  margin-bottom: 10px;
+}
+
 @media (min-width: 576px) {
 
   h1 {

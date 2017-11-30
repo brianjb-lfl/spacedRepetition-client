@@ -13,8 +13,6 @@ export class QuestionDisplay extends React.Component {
   render() {
     return (
       <div>
-        <p>{`life corr: ${this.props.lifeC}, life att: ${this.props.lifeA}`}</p>
-        <p>{`curr corr: ${this.props.currCorr}, curr att: ${this.props.currAtt}`}</p>
         <h3>id: {this.props.id}</h3>
         <div id="q-display">{this.props.question}</div>
       </div>

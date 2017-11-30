@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import './feedback-display.css';
 
 export class FeedbackDisplay extends React.Component {
 
@@ -11,9 +12,6 @@ export class FeedbackDisplay extends React.Component {
         <div>
           <div className="fb-label">The correct answer is:</div>
           <div className="fb-text">{this.props.answer}</div>
-          <div>{`Times attempted: ${this.props.qhistAtt}`}</div>
-          <div>{`Times correct: ${this.props.qhistCorr}`}</div>
-          <div>{`Accuracy: ${this.props.qhistCorr/this.props.qhistAtt}`}</div>
         </div>
       ) 
     }
@@ -22,8 +20,16 @@ export class FeedbackDisplay extends React.Component {
     }
 
     return (
-      <div id="feedback-box">
-        {feedbackCode}
+      <div>
+        <div id="feedback-box">
+          {feedbackCode}
+        </div>
+        <div id="q-history-box">
+          <div className="fb-label">Question history:</div>
+          <div className="fb-text">{`Times attempted: ${this.props.qhistAtt}`}</div>
+          <div className="fb-text">{`Times correct: ${this.props.qhistCorr}`}</div>
+          <div className="fb-text">{`Accuracy: ${this.props.qhistCorr/this.props.qhistAtt}`}</div>
+        </div>
       </div>
     )
   }
