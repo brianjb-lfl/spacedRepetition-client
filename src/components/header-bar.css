@@ -9,7 +9,7 @@ h1 {
   display: block;
   margin: 0;
   font-family: 'Russo One', sans-serif;
-  font-size: 2.0em;
+  font-size: 2.5em;
   font-weight: 300;
   color: yellow;
   text-shadow: 2px 2px rgb(104, 104, 97);
@@ -20,13 +20,3 @@ a {
   font-weight: 600;
 }
 
-@media (min-width: 576px) {
-
-  h1 {
-    font-size: 2.4em;
-  }
-
-
-
-
-}
