@@ -56,7 +56,6 @@ export const sendQResult = (userId, ansCorr) => dispatch => {
       return Promise.reject(res.statusText)
     }
     return
-    //return res.json();
   })
 }
 
