@@ -13,13 +13,15 @@ export class ScoreDisplay extends React.Component {
 
     return (
       <div id="score-line">
-        <div className="score-text">
-          <span className="score-label">Session: </span><span className="score-pct">{currPct.toLocaleString(undefined, {style: 'percent', minimumFractionDigits: 1})}</span>
-            ({this.props.currCorr} of {this.props.currAtt})
-        </div>
-        <div className="score-text">
-          <span className="score-label">Lifetime: </span><span className="score-pct">{lifePct.toLocaleString(undefined, {style: 'percent', minimumFractionDigits: 1})}</span>
-            ({this.props.lifeCorr} of {this.props.lifeAtt})
+        <div id="score-text-parent">
+          <div className="score-text">
+            <span className="score-label">Session: </span><span className="score-pct">{currPct.toLocaleString(undefined, {style: 'percent', minimumFractionDigits: 1})}</span>
+              ({this.props.currCorr} of {this.props.currAtt})
+          </div>
+          <div className="score-text">
+            <span className="score-label">Lifetime: </span><span className="score-pct">{lifePct.toLocaleString(undefined, {style: 'percent', minimumFractionDigits: 1})}</span>
+              ({this.props.lifeCorr} of {this.props.lifeAtt})
+          </div>
         </div>
       </div>
     )

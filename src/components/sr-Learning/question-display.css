@@ -6,14 +6,14 @@
 }
 
 #q-display {
-  width: 32%;
+  width: 45%;
   height: 76px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
   font-size: 4em;
-  background-color: #bebebe;
+  background: radial-gradient(#c9c9c9, #5e5c5c);
   color: #03032c;
   font-weight: 600;
   text-align: center;
@@ -24,3 +24,4 @@
 h3 {
   color: #b0b2d1
 }
+
