@@ -25,7 +25,6 @@ export const fetchStats = userId => dispatch => {
       return res.json();
     })
     .then( stats => {
-      //console.log(stats);
       return dispatch(postStats(stats))
     })
 }
@@ -36,7 +35,6 @@ export const fetchQuestion = userId => dispatch => {
       return res.json();
     })
     .then( question => {
-      //console.log(question);
       dispatch(postQuestion(question))
     })
 }
