@@ -12,7 +12,7 @@ const initialState = {
 
 export default function reducer(state = initialState, action) {
   if (action.type === 'POST_STATS') {
-    console.log('post stats ', state.currCorr, state.currAtt);
+    //console.log('post stats ', state.currCorr, state.currAtt);
     return Object.assign({}, state, {
       lifeCorr: action.stats.hCorr,
       lifeAtt: action.stats.hAtt
@@ -20,7 +20,7 @@ export default function reducer(state = initialState, action) {
   }
 
   else if (action.type === 'POST_QUESTION') {
-    console.log('post q ', state.currCorr, state.currAtt);
+    //console.log('post q ', state.currCorr, state.currAtt);
     return Object.assign({}, state, {
       qhistCorr: action.question.qhistCorr,
       qhistAtt: action.question.qhistAtt,
@@ -31,7 +31,7 @@ export default function reducer(state = initialState, action) {
   }
   
   else if (action.type === 'PROCESS_ANSWER') {
-    console.log('pre process a ', state.currCorr, state.currAtt);
+    //console.log('pre process a ', state.currCorr, state.currAtt);
     let newStatus = '';
     let newCorr = state.currCorr;
     let newhCorr = state.lifeCorr;
